@@ -1,0 +1,26 @@
+body{
+    background-color: #e4f9fe;
+}
+#divDesencriptar{
+    background-color: #ffffff;
+    border-radius: 30px;
+}
+#btnEncriptar {
+    border-radius: 15px;
+    background-color: #232f7d;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+#btnDesencriptar {
+    border-radius: 15px;
+    background-color: #D8DFE8;
+    color: #0A3871;;
+    font-size: 15px;
+    border-color: #0A3871;
+}
+
+#txtDesencriptar{
+    margin-top: 100px;
+    visibility: collapse;
+}
