@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,44 +19,61 @@
                 textoCopiar.select();
                 textoCopiar.setSelectionRange(0, 99999);
                 document.execCommand('copy');
-            }      
-
+            }                              
+            
             function capturar(){                
-                var textoEncriptar = document.getElementById("textoEncriptar").value;
-                
-                if(textoEncriptar != ""){                    
-                    document.getElementById("txtDesencriptar").value = textoEncriptar; 
-                    document.getElementById("textoEncriptar").value = "";
-                    var txtDesencriptar = document.getElementById("txtDesencriptar");                   
-                    //var img = document.getElementById("imagen");
-                    
-                   // img.style.visibility = 'collapse';                  
-                    //txtDesencriptar.style.visibility = 'visible';
+                var textoEncriptar = document.getElementById("textoEncriptar").value;                
+                if(textoEncriptar != ""){                                                            
                     ocultarContenido();
+                    var frase = encriptar(textoEncriptar);
+                    document.getElementById("txtDesencriptar").value = frase; 
+                    document.getElementById("textoEncriptar").value = "";
                 }                                
-            }            
+            }       
+            
+            var text;
+
+            function encriptar (text){
+                var ltr;
+                var frase = "";
+                for(var i = 0; i<text.length; i++){                    
+                    switch (text.charAt(i)) {
+                        case "a":
+                            ltr = text.charAt(i).replace("a", "ai");                                                                                    
+                            break;
+                        case "e":
+                            ltr = text.charAt(i).replace('e', 'enter');                             
+                            break;                            
+                        case "i":
+                            ltr = text.charAt(i).replace('i', 'imes'); 
+                            
+                        break;
+                        case "o":
+                            ltr = text.charAt(i).replace('o', 'ober');                             
+                        break;
+                        case "u":
+                            ltr = text.charAt(i).replace('u', 'ufat');                             
+                        break;
+                        default:
+                            ltr = text.charAt(i);                            
+                            break;
+                    }         
+                    frase = frase + ltr;                
+                }
+                console.log(frase);
+                return frase;
+            }
 
             function ocultarContenido(){
                 var img = document.getElementById("imagen");
                 var label1 = document.getElementById("label1");
                 var label2 = document.getElementById("label2");
                 var txtDesencriptar = document.getElementById("txtDesencriptar");
-
                 img.style.visibility = "collapse";
                 label1.style.visibility = "collapse";
                 label2.style.visibility = "collapse";
-
-                /*img.style.display = "none";
-                label1.style.display = "none";
-                label2.style.display = "none";*/
-
                 txtDesencriptar.style.visibility = "visible";
-                txtDesencriptar.style.marginTop = "";
-                //if(elemento.style.visibility=="collapse"){
-                  //  elemento.style.visibility == "visible";
-                //}else{
-                //    elemento.style.visibility = "collapse";
-                //}
+                txtDesencriptar.style.marginTop = "";               
             }
         </script>
     </head>    
