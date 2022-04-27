@@ -17,6 +17,10 @@ body{
     color: #ffffff;
     font-size: 15px;
 }
+#btnEncriptar:hover{
+    background-color: #3243ad;
+    transition-duration: 1ms;    
+}
 
 #btnDesencriptar {
     border-radius: 15px;
@@ -24,6 +28,10 @@ body{
     color: #0A3871;;
     font-size: 15px;
     border-color: #0A3871;
+}
+#btnDesencriptar:hover , #btnCopiar:hover{
+    background-color: #a6b7cb;
+    transition-duration: 1ms;    
 }
 #btnCopiar{
     border-radius: 15px;

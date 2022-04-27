@@ -10,14 +10,24 @@ function copiar(){
 }                              
 
 function capturar(){                
-    var textoEncriptar = document.getElementById("textoEncriptar").value;                
+    var textoEncriptar = document.getElementById("textoEncriptar").value.toLowerCase();                
     if(textoEncriptar != ""){                                                            
         ocultarContenido();
         var frase = encriptar(textoEncriptar);
         document.getElementById("txtDesencriptar").value = frase; 
         document.getElementById("textoEncriptar").value = "";
-    }                                
-}       
+    }                                    
+}  
+
+function capturarDesencriptar(){                
+    var textoEncriptar = document.getElementById("textoEncriptar").value.toLowerCase();                
+    if(textoEncriptar != ""){                                                            
+        ocultarContenido();
+        var frase = desencriptar(textoEncriptar);
+        document.getElementById("txtDesencriptar").value = frase; 
+        document.getElementById("textoEncriptar").value = "";
+    }                                    
+}  
 
 var text;
 
@@ -47,8 +57,25 @@ function encriptar (text){
                 break;
         }         
         frase = frase + ltr;                
+    }    
+    return frase;
+}
+
+function desencriptar(text){    
+    var arr = text.split(" ");
+    console.log(arr);
+    
+    var frase = " "; 
+    var cadena = "";
+    for(var i = 0; i < arr.length; i++){
+        cadena = arr[i].replace(/enter/g, "e");
+        cadena = cadena.replace(/ober/g , "o");
+        cadena = cadena.replace(/imes/g , "i");
+        cadena = cadena.replace(/ai/g , "a");
+        cadena = cadena.replace(/ufat/g , "u");
+        frase = frase + " " + cadena;
     }
-    console.log(frase);
+    
     return frase;
 }
 
