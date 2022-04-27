@@ -11,6 +11,7 @@ body{
     width: auto;
     vertical-align: bottom;
 }
+/* Configuracion de los botones encriptar y desencripar */
 #btnEncriptar {
     border-radius: 15px;
     background-color: #232f7d;
@@ -33,6 +34,18 @@ body{
     background-color: #a6b7cb;
     transition-duration: 1ms;    
 }
+
+/* Valores iniciales del textarea oculto donde se mostrara el resultado de las encripatacion y desencriptaciones */
+
+#txtDesencriptar{
+    margin-top: 100px;
+    visibility: collapse;
+    border-style: none;
+    font-size: 20px;
+}
+
+/* Configuracion para el boton copiar */
+
 #btnCopiar{
     border-radius: 15px;
     background-color: #ffffff;
@@ -40,9 +53,18 @@ body{
     font-size: 15px;
     border-color: #0A3871;
 }
-#txtDesencriptar{
-    margin-top: 100px;
-    visibility: collapse;
-    border-style: none;
-    font-size: 20px;
+.piePagina{
+    width: 100%;
+}
+.piePagina ul{
+    text-align: center;   
+   
+}
+.items{
+    display: inline-block;
+    padding: 10px 7px;    
+}
+.items a i{
+    color: #0A3871;
+    font-size: 30px;
 }

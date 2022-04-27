@@ -1,6 +1,8 @@
+//// FUNCIONES USADAS PARA EL PROYECTO DE ENCRIPTACION - CHALLENGE ALURA N°1 ////
 function saltarlinea(){
-    document.write("<br><br><br><br><br>");
+    document.write("<br><br><br><br><br>");    
 }
+//Realiza saltos de linea para separar contenido
 
 function copiar(){                
     var textoCopiar = document.getElementById("txtDesencriptar");                
@@ -8,6 +10,7 @@ function copiar(){
     textoCopiar.setSelectionRange(0, 99999);
     document.execCommand('copy');
 }                              
+//Funcion para copiar el contenido resultante de la encriptacion.
 
 function capturar(){                
     var textoEncriptar = document.getElementById("textoEncriptar").value.toLowerCase();                
@@ -18,6 +21,10 @@ function capturar(){
         document.getElementById("textoEncriptar").value = "";
     }                                    
 }  
+//La funcion captura el valor digitado por el usuario, lo convertimos a minusculas en caso de 
+//que se haya insertado una mayuscula, verificamos que no este vacia la variable,
+//si tiene información ejecutamos la funcion que oculta el contenido no necesario
+//enviamos el texto a encriptar, para luego recibir el resultado y mostrarselo al usuario
 
 function capturarDesencriptar(){                
     var textoEncriptar = document.getElementById("textoEncriptar").value.toLowerCase();                
@@ -28,8 +35,9 @@ function capturarDesencriptar(){
         document.getElementById("textoEncriptar").value = "";
     }                                    
 }  
-
+//Funcion para desencriptar el contenido, tiene el mismo funcionamiento que la encriptacion
 var text;
+
 
 function encriptar (text){
     var ltr;
@@ -61,12 +69,26 @@ function encriptar (text){
     return frase;
 }
 
+//Toma la frase a encriptar, la descompone letra a letra buscando y reemplazando las vocales
+//para al final reagrupar la frase ya procesada, al final la retornamos
+
 function desencriptar(text){    
-    var arr = text.split(" ");
-    console.log(arr);
+    var frase = "";
+    frase = text.replace(/enter/igm, "e");
+    frase = frase.replace(/ober/igm , "o");
+    frase = frase.replace(/imes/igm , "i");
+    frase = frase.replace(/ai/igm , "a");
+    frase = frase.replace(/ufat/igm , "u");
+
+    return frase;
+
+    //var arr = text.split(" ");
+    //console.log(arr);
     
-    var frase = " "; 
-    var cadena = "";
+    //var frase = " "; 
+    //var cadena = "";
+    
+    /*
     for(var i = 0; i < arr.length; i++){
         cadena = arr[i].replace(/enter/g, "e");
         cadena = cadena.replace(/ober/g , "o");
@@ -74,10 +96,10 @@ function desencriptar(text){
         cadena = cadena.replace(/ai/g , "a");
         cadena = cadena.replace(/ufat/g , "u");
         frase = frase + " " + cadena;
-    }
-    
-    return frase;
+    }*/
 }
+//Funcion que toma la frase encriptada y busca por todas las palabras que contengan las palabras encriptadas y las 
+//regresa a su estado original
 
 function ocultarContenido(){
     var img = document.getElementById("imagen");
@@ -90,3 +112,5 @@ function ocultarContenido(){
     txtDesencriptar.style.visibility = "visible";
     txtDesencriptar.style.marginTop = "";               
 }
+//Funcion para ocultar el contenido y mostrar el espacio donde se muestra la frase desencriptada 
+//y el boton copiar
