@@ -7,6 +7,10 @@ body{
     border-radius: 30px;
 }
 /* Color de la zona de desencriptar de la segunda division */
+.conjuntoBotones{
+    width: auto;
+    vertical-align: bottom;
+}
 #btnEncriptar {
     border-radius: 15px;
     background-color: #232f7d;
