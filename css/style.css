@@ -1,57 +1,106 @@
+*{
+    font-family: 'Montserrat', sans-serif; 
+}
 body{
     background-color: #e4f9fe;
+    width: 100%;
+    margin: auto;       
 }
-/* Color principal de la pagina */
-#divDesencriptar{
-    background-color: #ffffff;
-    border-radius: 30px;
+.encabezado{
+    width: 80%;  
+    padding: 1em;
+    margin: 0 auto;  
 }
-/* Color de la zona de desencriptar de la segunda division */
-.conjuntoBotones{
-    width: auto;
-    vertical-align: bottom;
+.contenedor{
+    width: 85%;        
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
 }
-/* Configuracion de los botones encriptar y desencripar */
-#btnEncriptar {
-    border-radius: 15px;
+.seccionEncriptar{    
+    width: 70%;
+}
+.divEnc{
+    width: 70%;
+    margin: 0 auto;
+    padding: 1em;
+}
+.txtEncriptar{
+    width: 80%;       
+    margin: 0 auto;
+    text-align: justify;    
+    padding: 1em;
+    border: none;
+}
+.divBotones{    
+    margin-top: 75%;    
+}
+.btn{
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #b3b3b3 ;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+.btnEncriptar{
     background-color: #232f7d;
     color: #ffffff;
-    font-size: 15px;
 }
-#btnEncriptar:hover{
+.btnEncriptar:hover{
     background-color: #3243ad;
-    transition-duration: 1ms;    
+    transition-duration: 1ms; 
 }
-
-#btnDesencriptar {
-    border-radius: 15px;
+.btnDesencriptar{
     background-color: #D8DFE8;
-    color: #0A3871;;
+    color: #000000;
+}
+.btnDesencriptar:hover{
+    background-color: #c8cdd3;
+    transition-duration: 1ms; 
+}
+.seccionDesencripr{    
+    width: 30%;
+    background: #ffffff;
+    border-radius: 30px;
+}
+.divDesen{
+    padding: 1em;
+    margin: auto;
+    width: 90%;
+    display: grid;    
+}
+.txtDesencriptar{
+    width: 80%;     
+    height: 300px;  
+    margin: auto;    
+    padding: 1em;
+    display: none;     
+    border: #ffffff;   
+}
+.imgFoto{
+    width: 250px;
+    margin: auto;
+    margin-top: 80px;
+}
+.divDesen p{
+    font-weight: bold;
+    text-align: center;
+}
+.divDesen label{
+    margin-top: 5px;
     font-size: 15px;
-    border-color: #0A3871;
+    text-align: center;
 }
-#btnDesencriptar:hover , #btnCopiar:hover{
-    background-color: #a6b7cb;
-    transition-duration: 1ms;    
+.btnCopiar{
+    margin: 0 auto;
+    margin-top: 150px;
+    display: none;
 }
-
-/* Valores iniciales del textarea oculto donde se mostrara el resultado de las encripatacion y desencriptaciones */
-
-#txtDesencriptar{
-    margin-top: 100px;
-    visibility: collapse;
-    border-style: none;
-    font-size: 20px;
-}
-
-/* Configuracion para el boton copiar */
-
-#btnCopiar{
-    border-radius: 15px;
-    background-color: #ffffff;
-    color: #0A3871;;
-    font-size: 15px;
-    border-color: #0A3871;
+.btnCopiar:hover{
+    background-color: #c8cdd3;
+    transition-duration: 1ms;
 }
 .piePagina{
     width: 100%;
@@ -68,3 +117,7 @@ body{
     color: #0A3871;
     font-size: 30px;
 }
+
+
+
+
