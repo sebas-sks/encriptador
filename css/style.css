@@ -121,21 +121,24 @@ body{
     .contenedor{        
         width: 100%;
     }
-    .seccionEncriptar, .seccionDesencripr{
-        width: 50%;
+    .seccionEncriptar{
+        width: 60%;
         margin: 0 auto;
+    }
+    .seccionDesencripr{
+        width: 40%;
     }
     .divBotones{
         width: 100%;
         margin: 80% 0 auto;
     }
     .btn{
-        width: 80%;
+        width: 100%;
         margin: 10px auto;
     }
 }
 
-@media screen and (max-width:550px){
+@media screen and (max-width:600px){
     .contenedor{
         display: inline-block;
         width: 100%;
@@ -144,13 +147,27 @@ body{
         width: 90%;
         margin: 0 auto;
     }
+    .txtEncriptar{      
+        width: 90%;  
+        height: 150px;
+        
+    }
+    .divEnc{
+        margin: 0 auto;
+        display: grid;
+        text-align: center;
+    }
     .divBotones{
         width: 100%;
-        margin: 80% 0 auto;
+
+        margin: 30% 0 auto;
     }
     .btn{
-        width: 80%;
+        width: 100%;
         margin: 10px auto;
+    }
+    .imgFoto{
+        margin-top: 0;
     }
 }
 
