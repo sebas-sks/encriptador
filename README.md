@@ -1,0 +1,17 @@
+# encriptador
+#ChallengeOracleOne
+
+# Descripción
+El sistema propuesto realiza la encriptación de palabras, frases y textos, creando palabras cifradas para esconder mensajes que se quieran hacer secretos.
+La aplicación fue realizada con HTML, CSS y JavaScript.
+
+# ¿Cómo funciona?
+Se aplica un algoritmo que sustituye las vocales por "llaves" de encriptación, dichas llaves son:
+
+La letra "e" es convertida para "enter"
+La letra "i" es convertida para "imes"
+La letra "a" es convertida para "ai"
+La letra "o" es convertida para "ober"
+La letra "u" es convertida para "ufat"
+# Ejemplo:
+El resultado del cifrado puede verse de la siguiente manera "gato" => "gaitober".
