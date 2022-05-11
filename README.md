@@ -13,5 +13,6 @@ La letra "i" es convertida para "imes"
 La letra "a" es convertida para "ai"
 La letra "o" es convertida para "ober"
 La letra "u" es convertida para "ufat"
+
 # Ejemplo:
 El resultado del cifrado puede verse de la siguiente manera "gato" => "gaitober".
