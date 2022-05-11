@@ -16,3 +16,6 @@ Se aplica un algoritmo que sustituye las vocales por "llaves" de encriptación, 
 
 # Ejemplo:
 El resultado del cifrado puede verse de la siguiente manera "gato" => "gaitober".
+
+# Pruebalo tu mismo.
+sebas-sks.github.io/encriptador/
