@@ -6,7 +6,7 @@ El sistema propuesto realiza la encriptación de palabras, frases y textos, crea
 La aplicación fue realizada con HTML, CSS y JavaScript.
 
 # ¿Cómo funciona?
-Se aplica un algoritmo que sustituye las vocales por "llaves" de encriptación, dichas llaves son:
+Se aplica un algoritmo que sustituye las vocales por "llaves" de encriptación, dichas llaves son
 
 La letra 'e' es convertida en 'enter'
 La letra 'i' es convertida en 'imes'
