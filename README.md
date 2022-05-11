@@ -18,4 +18,4 @@ Se aplica un algoritmo que sustituye las vocales por "llaves" de encriptación, 
 El resultado del cifrado puede verse de la siguiente manera "gato" => "gaitober".
 
 # Pruebalo tu mismo.
-https://sebas-sks.github.io/
+https://sebas-sks.github.io/encriptador/
